@@ -2,7 +2,8 @@
 
 module.exports = function(app) {
 	// Root routing
-	var crime = require('../../app/controllers/crime.server.controller');
-	app.route('/map').get(crime.map);
-	app.route('/search').get(crime.search);
+	var messageboard = require('../../app/controllers/messageboard.server.controller');
+	app.route('/messageboard').get(messageboard.index);
+	app.route('/getmessage/:begindate/:enddate').get(messageboard.getMessage);
+	app.route('/postmessage').post(messageboard.postMessage);
 };
