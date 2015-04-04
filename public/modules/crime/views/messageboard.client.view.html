@@ -1,30 +1,76 @@
-<section data-ng-controller="MessageBoardController">
-    <h1 class="text-center" style="font-size:46px">VINCENT</h1>
-    <div style=" width:20%; height:3px; margin:0px 40% 5px 40%"></div>
-    <div style=" margin:20px 5%; min-height:450px; padding:0 10% " class="container jumbotron">
-        <div style="margin:30px 43% 30px 44%">
-            <form>
-                <a href="#!map" class=" btn btn-info">Map View</a>
-            </form>
-        </div>
-        <form action="" style="">
-            <table>
+<head>
+    <style>
+        li:nth-of-type(2n){
+            color: darkgray;
+        }
+    </style>
+</head>
+    <section data-ng-controller="MessageBoardController">
+        <h1 class="text-center" style="font-size:46px">VINCENT</h1>
+        <div style=" width:20%; height:3px; margin:0px 40% 5px 40%"></div>
+        <div style=" margin:20px 5%; min-height:450px; padding:2% 10% " class="container jumbotron">
+            <div style="display:inline-block;">
+
+            </div>
+            <table style="width:100%">
                 <colgroup>
-                    <col style="width:30%"/>
-                    <col style="width:40%"/>
-                    <col style="width:30%"/>
+                    <col style="width:16%" />
+                    <col style="width:68%" />
+                    <col style="width:16%" />
                 </colgroup>
                 <tr>
                     <td></td>
                     <td>
-                        <input type="textarea" name="Time" style="margin-right:15px; width:120px" placeholder="Enter Text Here...">
-                        <div style="display:inline-block; float:right">
-                            <input type="submit" value="Search" class="btn btn-info">
-                        </div>
+                            <div class="panel panel-danger" style="width:100%; margin-top:30px; text-align:center;  font-size:20px; ">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Messages</h3>
+                                </div>
+                                <div class="panel-body" id="scroll" style="text-align:left; overflow-y:scroll; height:250px; ">
+                                    <ul style="color:#3498db;">
+                                        <li>Test</li>
+                                        <li>Test</li>
+                                        <li>Test</li>
+                                        <li>Test</li>
+                                        <li>Test</li>
+                                        <li>Test</li>
+                                        <li>Test</li>
+                                        <li>Test</li>
+                                        <li>Test</li>
+                                        <li>Test</li>
+                                    </ul>
+                                </div>
+                            </div>
                     </td>
                     <td></td>
                 </tr>
             </table>
-        </form>
-    </div>
-</section>
+            <form action="" style="">
+                <table class="text-center">
+                    <colgroup>
+                        <col style="width:30%" />
+                        <col style="width:40%" />
+                        <col style="width:30%" />
+                    </colgroup>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <textarea name="Time" rows="5" cols="65" placeholder="Enter Text Here..."></textarea>
+                            <div style="display:inline-block; margin-right:15px; float:left">
+                                <a href="#!map" class=" btn btn-info">Go To Map View</a>
+                            </div>
+                            <div style="display:inline-block;margin-right:auto; margin-left:auto">
+                                <a href="#!advancedsearch" class=" btn btn-info">Go To Advanced Search</a>
+                            </div>
+                            <div style="display:inline-block; float:right">
+                                <input type="submit" value="Submit" class="btn btn-info">
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <script>
+            $('#scroll').scrollTop(1000);
+        </script>
+    </section>
