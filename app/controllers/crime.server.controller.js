@@ -21,20 +21,22 @@ exports.search = function(req, res) {
 };
 
 exports.updatedb = function(req, res) {
-	var data = req.body.crimes;
+	var crimes = req.body.crimes;
 	var output = {
 		"crimes": []
 		};
-	data.forEach(function(x) {
-		var c  = new Crime(x);
-		c.save(function(err) {
+
+	for (var data in crimes) {
+		var crime  = new Crime(x);
+		crime.save(function(err) {
 			if(err) {
 				return res.status(400).send({
 					message: errorHandler.getErrorMessage(err)
-				})
+				});
 			}
-		})
-		output["crimes"].push(c);
-	})
+		});
+		output["crimes"].push(crime);
+	}
+
 	res.json(output)
 }
