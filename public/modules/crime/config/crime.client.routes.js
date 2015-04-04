@@ -6,11 +6,15 @@ angular.module('crime').config(['$stateProvider',
 		// Map View state routing
 		$stateProvider
 		.state('mapView', {
-			url: '/map',
+			url: '/Map',
 			templateUrl: 'modules/crime/views/map.client.view.html'
 		})
 		.state('advancedSearch', {
-			url: '/advancedsearch',
+			url: '/AdvanceSearch',
+			templateUrl: 'modules/crime/views/advancesearch.client.view.html'
+		});
+		.state('messageBoard', {
+			url: '/MessageBoard',
 			templateUrl: 'modules/crime/views/advancedsearch.client.view.html'
 		});
 	}

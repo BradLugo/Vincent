@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('crime').controller('AdvancedSearchController', ['$scope', 'Authentication',
+angular.module('crime').controller('AdvanceSearchController', ['$scope', 'Authentication',
 	function($scope, Authentication) {
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
