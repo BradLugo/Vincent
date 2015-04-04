@@ -9,13 +9,13 @@ var mongoose = require('mongoose'),
 	_ = require('lodash');
 
 exports.map = function(req, res) {
-	res.render('map', {
+	res.render('index', {
 		request: req
 	});
 };
 
 exports.search = function(req, res) {
-	res.render('search', {
+	res.render('index', {
 		request: req
 	});
 };
