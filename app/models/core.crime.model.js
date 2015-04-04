@@ -14,12 +14,20 @@ var CrimeScheme = new Schema({
             type: Date,
         },
 
-        time: {
-            type: Date
+        hour: {
+            type: Number,
         },
 
-        location: {
+        street: {
             type: String,
+        },
+
+        type: {
+          type: String,
+        },
+
+        block: {
+          type: String,
         },
 
 });
