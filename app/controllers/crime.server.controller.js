@@ -14,7 +14,7 @@ exports.map = function(req, res) {
 	});
 };
 
-exports.search = function(req, res) {
+exports.advancedsearch = function(req, res) {
 	res.render('index', {
 		request: req
 	});

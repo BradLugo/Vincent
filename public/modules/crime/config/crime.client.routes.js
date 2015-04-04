@@ -10,8 +10,8 @@ angular.module('crime').config(['$stateProvider',
 			templateUrl: 'modules/crime/views/map.client.view.html'
 		})
 		.state('advancedSearch', {
-			url: '/advancesearch',
-			templateUrl: 'modules/crime/views/advancesearch.client.view.html'
+			url: '/advancedsearch',
+			templateUrl: 'modules/crime/views/advancedsearch.client.view.html'
 		});
 	}
 ]);
